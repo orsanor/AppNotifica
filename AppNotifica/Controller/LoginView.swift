@@ -40,18 +40,23 @@ class LoginView: UIView {
     }()
     
     private func setupVisualElements() {
-        addSubview(imageLogin)
+        self.addSubview(imageLogin)
+        self.addSubview(imageLabel)
         
         NSLayoutConstraint.activate([
             imageLogin.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
             imageLogin.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageLogin.widthAnchor.constraint(equalToConstant: 275),
             imageLogin.heightAnchor.constraint(equalToConstant: 82),
-            
-            
             imageLogin.topAnchor.constraint(equalTo: imageLogin.bottomAnchor, constant: 5),
             imageLogin.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            imageLogin.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            imageLogin.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            
+            imageLabel.widthAnchor.constraint(equalToConstant: 275),
+            imageLabel.topAnchor.constraint(equalTo: imageLogin.bottomAnchor, constant: 5),
+            imageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            imageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
 }
