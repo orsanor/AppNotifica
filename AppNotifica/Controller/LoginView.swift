@@ -11,7 +11,7 @@ import UIKit
 class LoginView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = .viewBackgroundColor
         setupVisualElements()
     }
     
@@ -19,44 +19,64 @@ class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
    
-    lazy var imageLogin: UIImageView = {
-        let imagem = UIImageView()
-        imagem.image = UIImage(named: "ImageLogin")
-        imagem.contentMode = .scaleAspectFit
-        
-        imagem.translatesAutoresizingMaskIntoConstraints = false
-        return imagem
-    }()
+    lazy var imageLogin = ImageDefault(image: "ImageLogin")
     
-    lazy var imageLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Registre e gerencia as ocorrências no seu IF"
-        label.textColor = UIColor(red: 138/255, green: 138/255, blue: 142/255, alpha: 1)
-        label.textAlignment = .center
-        label.font = UIFont(name: "SProDisplay-Light", size: 17)
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    lazy var imageLabel = labelDefault(text: "Registre e gerencia as ocorrências no seu IF")
+    
+    var emailTextField = textfieldDefault(text: "Email")
+    
+    var senhaTextField = textfieldDefault(text: "Senha")
+    
+    var buttonLogar = buttonDefault(text: "Login")
+    
+    var buttonRegistrar = buttonDefault(text: "Registrar")
+
+
     
     private func setupVisualElements() {
         self.addSubview(imageLogin)
         self.addSubview(imageLabel)
+        self.addSubview(emailTextField)
+        self.addSubview(senhaTextField)
+        self.addSubview(buttonLogar)
+        self.addSubview(buttonRegistrar)
         
         NSLayoutConstraint.activate([
-            imageLogin.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
-            imageLogin.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageLogin.widthAnchor.constraint(equalToConstant: 275),
-            imageLogin.heightAnchor.constraint(equalToConstant: 82),
-            imageLogin.topAnchor.constraint(equalTo: imageLogin.bottomAnchor, constant: 5),
-            imageLogin.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            imageLogin.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            imageLogin.widthAnchor.constraint(equalToConstant: 274.99),
+            imageLogin.heightAnchor.constraint(equalToConstant: 82.64),
+            imageLogin.topAnchor.constraint(equalTo: self.topAnchor, constant: 228),
+            imageLogin.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 57),
+            imageLogin.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -57),
             
             
             imageLabel.widthAnchor.constraint(equalToConstant: 275),
             imageLabel.topAnchor.constraint(equalTo: imageLogin.bottomAnchor, constant: 5),
             imageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            imageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            imageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
+            emailTextField.widthAnchor.constraint(equalToConstant: 374),
+            emailTextField.heightAnchor.constraint(equalToConstant: 60),
+            emailTextField.topAnchor.constraint(equalTo: imageLabel.bottomAnchor, constant: 70),
+            emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            
+            senhaTextField.widthAnchor.constraint(equalToConstant: 374),
+            senhaTextField.heightAnchor.constraint(equalToConstant: 60),
+            senhaTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 23),
+            senhaTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            senhaTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            
+            buttonLogar.widthAnchor.constraint(equalToConstant: 374),
+            buttonLogar.heightAnchor.constraint(equalToConstant: 60),
+            buttonLogar.topAnchor.constraint(equalTo: senhaTextField.bottomAnchor, constant: 25),
+            buttonLogar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            buttonLogar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            
+            buttonRegistrar.widthAnchor.constraint(equalToConstant: 374),
+            buttonRegistrar.heightAnchor.constraint(equalToConstant: 60),
+            buttonRegistrar.topAnchor.constraint(equalTo: buttonLogar.bottomAnchor, constant: 25),
+            buttonRegistrar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            buttonRegistrar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
         ])
     }
 }
