@@ -1,14 +1,14 @@
 //
-//  LoginView.swift
+//  RegisterView.swift
 //  AppNotifica
 //
-//  Created by IFBIOTIC14 on 29/07/24.
+//  Created by IFBIOTIC14 on 31/07/24.
 //
 
 import Foundation
 import UIKit
 
-class LoginView: UIView {
+class RegisterView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .viewBackgroundColor
@@ -19,39 +19,34 @@ class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
    
-    lazy var imageLogin = ImageDefault(image: "ImageLogin")
     
-    lazy var imageLabel = labelDefault(text: "Registre e gerencia as ocorrências no seu IF")
+    var imageLabel = labelDefault(text: "Entre com seu e-mail e senha para se registrar.", font: UIFont.systemFont(ofSize: 20, weight: .regular))
     
     var emailTextField = textfieldDefault(text: "Email")
     
     var senhaTextField = textfieldDefault(text: "Senha")
     
-    var buttonLogar = buttonDefault(text: "Login")
+    var confirmarSenhaTextField = textfieldDefault(text: "Confirmar Senha")
     
-    var buttonRegistrar = buttonDefault(text: "Registrar")
+    var buttonLogar = buttonDefault(text: "Registrar")
+    
+    var buttonRegistrar = buttonDefault(text: "Logar")
 
 
     
     private func setupVisualElements() {
-        self.addSubview(imageLogin)
         self.addSubview(imageLabel)
         self.addSubview(emailTextField)
         self.addSubview(senhaTextField)
         self.addSubview(buttonLogar)
         self.addSubview(buttonRegistrar)
+        self.addSubview(confirmarSenhaTextField)
         
         NSLayoutConstraint.activate([
-            imageLogin.widthAnchor.constraint(equalToConstant: 274.99),
-            imageLogin.heightAnchor.constraint(equalToConstant: 82.64),
-            imageLogin.topAnchor.constraint(equalTo: self.topAnchor, constant: 228),
-            imageLogin.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 57),
-            imageLogin.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -57),
-            
-            
-            imageLabel.widthAnchor.constraint(equalToConstant: 275),
-            imageLabel.topAnchor.constraint(equalTo: imageLogin.bottomAnchor, constant: 5),
-            imageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            imageLabel.widthAnchor.constraint(equalToConstant: 374),
+            imageLabel.heightAnchor.constraint(equalToConstant: 60),
+            imageLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 228),
+            imageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
             imageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             
             emailTextField.widthAnchor.constraint(equalToConstant: 374),
@@ -66,9 +61,15 @@ class LoginView: UIView {
             senhaTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             senhaTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
+            confirmarSenhaTextField.widthAnchor.constraint(equalToConstant: 374),
+            confirmarSenhaTextField.heightAnchor.constraint(equalToConstant: 60),
+            confirmarSenhaTextField.topAnchor.constraint(equalTo: senhaTextField.bottomAnchor, constant: 23),
+            confirmarSenhaTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            confirmarSenhaTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            
             buttonLogar.widthAnchor.constraint(equalToConstant: 374),
             buttonLogar.heightAnchor.constraint(equalToConstant: 60),
-            buttonLogar.topAnchor.constraint(equalTo: senhaTextField.bottomAnchor, constant: 25),
+            buttonLogar.topAnchor.constraint(equalTo: confirmarSenhaTextField.bottomAnchor, constant: 25),
             buttonLogar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             buttonLogar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
