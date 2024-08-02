@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+extension UIColor {
+    static func customColor() -> UIColor {
+        return UIColor(red: 60/255, green: 60/255, blue: 67/255, alpha: 1)
+    }
+}
+
 class RegisterView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,9 +25,14 @@ class RegisterView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
    
-    
-    var imageLabel = labelDefault(text: "Entre com seu e-mail e senha para se registrar.", font: UIFont.systemFont(ofSize: 20, weight: .regular))
-    
+ 
+    var imageLabel: UILabel = {
+        let label = labelDefault(text: "Entre com seu e-mail e senha para se registrar.", font: UIFont.systemFont(ofSize: 20, weight: .regular))
+        label.textColor = UIColor.customColor()
+        return label
+    }()
+
+       
     var emailTextField = textfieldDefault(text: "Email")
     
     var senhaTextField = textfieldDefault(text: "Senha")
@@ -45,10 +56,11 @@ class RegisterView: UIView {
         NSLayoutConstraint.activate([
             imageLabel.widthAnchor.constraint(equalToConstant: 374),
             imageLabel.heightAnchor.constraint(equalToConstant: 60),
-            imageLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 228),
-            imageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            imageLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 200),
+            imageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             imageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            
+                
+                
             emailTextField.widthAnchor.constraint(equalToConstant: 374),
             emailTextField.heightAnchor.constraint(equalToConstant: 60),
             emailTextField.topAnchor.constraint(equalTo: imageLabel.bottomAnchor, constant: 70),
