@@ -25,7 +25,8 @@ class RegisterView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
    
- 
+    var onLoginTap: (() -> Void)?
+    
     var imageLabel: UILabel = {
         let label = labelDefault(text: "Entre com seu e-mail e senha para se registrar.", font: UIFont.systemFont(ofSize: 20, weight: .regular))
         label.textColor = UIColor.imageLabelColor()
@@ -39,9 +40,9 @@ class RegisterView: UIView {
     
     var confirmarSenhaTextField = textfieldDefault(text: "Confirmar Senha")
     
-    var buttonLogar = buttonDefault(text: "Registrar")
+    var buttonRegistrar = buttonDefault(text: "Registrar")
     
-    var buttonRegistrar = buttonDefault(text: "Logar")
+    var buttonLogar = buttonDefault(text: "Logar")
 
 
     
@@ -49,9 +50,11 @@ class RegisterView: UIView {
         self.addSubview(imageLabel)
         self.addSubview(emailTextField)
         self.addSubview(senhaTextField)
-        self.addSubview(buttonLogar)
         self.addSubview(buttonRegistrar)
+        self.addSubview(buttonLogar)
         self.addSubview(confirmarSenhaTextField)
+        
+        buttonLogar.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             imageLabel.widthAnchor.constraint(equalToConstant: 374),
@@ -79,17 +82,22 @@ class RegisterView: UIView {
             confirmarSenhaTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             confirmarSenhaTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
-            buttonLogar.widthAnchor.constraint(equalToConstant: 374),
-            buttonLogar.heightAnchor.constraint(equalToConstant: 60),
-            buttonLogar.topAnchor.constraint(equalTo: confirmarSenhaTextField.bottomAnchor, constant: 25),
-            buttonLogar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            buttonLogar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            
             buttonRegistrar.widthAnchor.constraint(equalToConstant: 374),
             buttonRegistrar.heightAnchor.constraint(equalToConstant: 60),
-            buttonRegistrar.topAnchor.constraint(equalTo: buttonLogar.bottomAnchor, constant: 25),
+            buttonRegistrar.topAnchor.constraint(equalTo: confirmarSenhaTextField.bottomAnchor, constant: 25),
             buttonRegistrar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             buttonRegistrar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            
+            buttonLogar.widthAnchor.constraint(equalToConstant: 374),
+            buttonLogar.heightAnchor.constraint(equalToConstant: 60),
+            buttonLogar.topAnchor.constraint(equalTo: buttonRegistrar.bottomAnchor, constant: 25),
+            buttonLogar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            buttonLogar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
         ])
+    }
+    
+    @objc
+    private func loginTap(){
+        onLoginTap?()
     }
 }
