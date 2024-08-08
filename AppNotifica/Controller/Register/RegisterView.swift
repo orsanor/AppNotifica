@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-extension UIColor {
-    static func imageLabelColor() -> UIColor {
-        return UIColor(red: 60/255, green: 60/255, blue: 67/255, alpha: 1)
-    }
-}
-
 class RegisterView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,7 +23,7 @@ class RegisterView: UIView {
     
     var imageLabel: UILabel = {
         let label = labelDefault(text: "Entre com seu e-mail e senha para se registrar.", font: UIFont.systemFont(ofSize: 20, weight: .regular))
-        label.textColor = UIColor.imageLabelColor()
+        label.textColor = UIColor(named: "labelRegisterColor")
         return label
     }()
 
