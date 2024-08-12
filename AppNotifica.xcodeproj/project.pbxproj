@@ -23,6 +23,10 @@
 		A48400E32C57D56D00250DF9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48400E22C57D56D00250DF9 /* Coordinator.swift */; };
 		A48400E52C57D5AB00250DF9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48400E42C57D5AB00250DF9 /* LoginCoordinator.swift */; };
 		A48400E82C57D6F400250DF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48400E72C57D6F400250DF9 /* LoginViewController.swift */; };
+		A4DC9A962C6A460A00E006D7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A952C6A460A00E006D7 /* HomeView.swift */; };
+		A4DC9A982C6A462600E006D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A972C6A462600E006D7 /* HomeViewController.swift */; };
+		A4DC9A9A2C6A464000E006D7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A992C6A464000E006D7 /* HomeCoordinator.swift */; };
+		A4DC9A9C2C6A4D2100E006D7 /* ViewControllerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A9B2C6A4D2100E006D7 /* ViewControllerDefault.swift */; };
 		A82C71F82C596EC300CB05D6 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C71F72C596EC300CB05D6 /* UIColor+.swift */; };
 		A82C71FB2C59796D00CB05D6 /* imageDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C71FA2C59796D00CB05D6 /* imageDefault.swift */; };
 		A82C71FD2C597A2300CB05D6 /* buttonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C71FC2C597A2300CB05D6 /* buttonDefault.swift */; };
@@ -68,6 +72,10 @@
 		A48400E22C57D56D00250DF9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A48400E42C57D5AB00250DF9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		A48400E72C57D6F400250DF9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A4DC9A952C6A460A00E006D7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A4DC9A972C6A462600E006D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A4DC9A992C6A464000E006D7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		A4DC9A9B2C6A4D2100E006D7 /* ViewControllerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDefault.swift; sourceTree = "<group>"; };
 		A82C71F72C596EC300CB05D6 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		A82C71FA2C59796D00CB05D6 /* imageDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDefault.swift; sourceTree = "<group>"; };
 		A82C71FC2C597A2300CB05D6 /* buttonDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonDefault.swift; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 				A48400E22C57D56D00250DF9 /* Coordinator.swift */,
 				A48400E42C57D5AB00250DF9 /* LoginCoordinator.swift */,
 				A46B555F2C5A7B0500B03D1E /* RegisterCoordinator.swift */,
+				A4DC9A992C6A464000E006D7 /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -186,10 +195,20 @@
 		A48400E62C57D69600250DF9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4DC9A942C6A45DE00E006D7 /* Home */,
 				A46B555A2C5A7AA100B03D1E /* Register */,
 				A46B55592C5A7A6F00B03D1E /* Login */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4DC9A942C6A45DE00E006D7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC9A952C6A460A00E006D7 /* HomeView.swift */,
+				A4DC9A972C6A462600E006D7 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		A82C71F62C596E5000CB05D6 /* Extension */ = {
@@ -207,6 +226,7 @@
 				A82C71FC2C597A2300CB05D6 /* buttonDefault.swift */,
 				A82C71FE2C597A3200CB05D6 /* labelDefault.swift */,
 				A82C72002C597A5600CB05D6 /* textFieldDefault.swift */,
+				A4DC9A9B2C6A4D2100E006D7 /* ViewControllerDefault.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -345,6 +365,7 @@
 				A48400E82C57D6F400250DF9 /* LoginViewController.swift in Sources */,
 				A82C71F82C596EC300CB05D6 /* UIColor+.swift in Sources */,
 				A46B555C2C5A7ABD00B03D1E /* RegisterView.swift in Sources */,
+				A4DC9A982C6A462600E006D7 /* HomeViewController.swift in Sources */,
 				A82C71FB2C59796D00CB05D6 /* imageDefault.swift in Sources */,
 				A82C72012C597A5600CB05D6 /* textFieldDefault.swift in Sources */,
 				A48400E52C57D5AB00250DF9 /* LoginCoordinator.swift in Sources */,
@@ -352,9 +373,12 @@
 				A48400E32C57D56D00250DF9 /* Coordinator.swift in Sources */,
 				A82C71FF2C597A3200CB05D6 /* labelDefault.swift in Sources */,
 				A432B40A2C51305700E15136 /* AppDelegate.swift in Sources */,
+				A4DC9A9A2C6A464000E006D7 /* HomeCoordinator.swift in Sources */,
 				A46B555E2C5A7AD300B03D1E /* RegisterViewController.swift in Sources */,
 				A82C71FD2C597A2300CB05D6 /* buttonDefault.swift in Sources */,
+				A4DC9A9C2C6A4D2100E006D7 /* ViewControllerDefault.swift in Sources */,
 				A48400E02C57CECC00250DF9 /* LoginView.swift in Sources */,
+				A4DC9A962C6A460A00E006D7 /* HomeView.swift in Sources */,
 				A432B40C2C51305700E15136 /* SceneDelegate.swift in Sources */,
 				A46B55602C5A7B0500B03D1E /* RegisterCoordinator.swift in Sources */,
 			);

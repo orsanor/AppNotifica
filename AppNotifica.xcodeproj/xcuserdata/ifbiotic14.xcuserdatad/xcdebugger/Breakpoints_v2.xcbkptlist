@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EBC987AC-CE81-45BD-B06A-1FA146628417"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D813760-3AE4-4FEB-A28B-061BB8F130F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppNotifica/Coordinator/HomeCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "HomeCoordinator"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6D813760-3AE4-4FEB-A28B-061BB8F130F6 - f159fc7b1ef24b4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppNotifica.HomeCoordinator.deinit"
+                  moduleName = "AppNotifica"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ifbiotic14/Desktop/Projetos/AppNotifica/AppNotifica/Coordinator/HomeCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "6D813760-3AE4-4FEB-A28B-061BB8F130F6 - 4586817957091c8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppNotifica.HomeCoordinator.__deallocating_deinit"
+                  moduleName = "AppNotifica"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ifbiotic14/Desktop/Projetos/AppNotifica/AppNotifica/Coordinator/HomeCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
