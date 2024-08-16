@@ -21,23 +21,34 @@ class LoginView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   
+    
     lazy var imageLogin = ImageDefault(image: "ImageLogin")
     
     lazy var imageLabel = labelDefault(text: "Registre e gerencia as ocorrências no seu IF", font: UIFont.systemFont(ofSize: 15, weight: .regular))
     
-    var emailTextField = textfieldDefault(text: "Email")
+    //cria a variavel com as propriedades da text no login
+    var emailTextField = textfieldDefault(placeholder: "Email", keyBoardType: .emailAddress, returnKeyType: .next)
     
-    var senhaTextField = textfieldDefault(text: "Senha")
-    
+    //cria a função com as propriedades da text no login
+    var senhaTextField: textfieldDefault = {
+        let text = textfieldDefault(placeholder: "Senha", keyBoardType: .emailAddress, returnKeyType: .done)
+        
+        text.isSecureTextEntry = true
+        
+        return text
+    }()
+  
     var buttonLogar = buttonDefault(text: "Logar")
     
     var buttonRegistrar = buttonDefault(text: "Registrar")
     
- 
-
+    
+    
     
     private func setupVisualElements() {
+//      super.setupVisualElements()
+        emailTextField.delegate = self
+        senhaTextField.delegate = self
         self.addSubview(imageLogin)
         self.addSubview(imageLabel)
         self.addSubview(emailTextField)
@@ -84,15 +95,31 @@ class LoginView: UIView {
             buttonRegistrar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             buttonRegistrar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
         ])
-            
-        }
+        
+    }
     @objc
-     private func registerTap(){
-         onRegisterTap?()
+    private func registerTap(){
+        onRegisterTap?()
     }
     
     @objc
-     private func loginTap(){
-         onLoginTap?()
+    private func loginTap(){
+        onLoginTap?()
+    }
+}
+
+extension LoginView: UITextFieldDelegate {
+    
+    // configura o botão seguinte do teclado
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == emailTextField {
+            self.senhaTextField.becomeFirstResponder()
+            
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }

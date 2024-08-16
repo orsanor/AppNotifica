@@ -23,6 +23,7 @@
 		A48400E32C57D56D00250DF9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48400E22C57D56D00250DF9 /* Coordinator.swift */; };
 		A48400E52C57D5AB00250DF9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48400E42C57D5AB00250DF9 /* LoginCoordinator.swift */; };
 		A48400E82C57D6F400250DF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48400E72C57D6F400250DF9 /* LoginViewController.swift */; };
+		A48ABFAE2C6F895400E57A86 /* ViewDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48ABFAD2C6F895400E57A86 /* ViewDefault.swift */; };
 		A4DC9A962C6A460A00E006D7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A952C6A460A00E006D7 /* HomeView.swift */; };
 		A4DC9A982C6A462600E006D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A972C6A462600E006D7 /* HomeViewController.swift */; };
 		A4DC9A9A2C6A464000E006D7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A992C6A464000E006D7 /* HomeCoordinator.swift */; };
@@ -72,6 +73,7 @@
 		A48400E22C57D56D00250DF9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A48400E42C57D5AB00250DF9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		A48400E72C57D6F400250DF9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A48ABFAD2C6F895400E57A86 /* ViewDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDefault.swift; sourceTree = "<group>"; };
 		A4DC9A952C6A460A00E006D7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A4DC9A972C6A462600E006D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A4DC9A992C6A464000E006D7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				A82C71FE2C597A3200CB05D6 /* labelDefault.swift */,
 				A82C72002C597A5600CB05D6 /* textFieldDefault.swift */,
 				A4DC9A9B2C6A4D2100E006D7 /* ViewControllerDefault.swift */,
+				A48ABFAD2C6F895400E57A86 /* ViewDefault.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				A82C71FD2C597A2300CB05D6 /* buttonDefault.swift in Sources */,
 				A4DC9A9C2C6A4D2100E006D7 /* ViewControllerDefault.swift in Sources */,
 				A48400E02C57CECC00250DF9 /* LoginView.swift in Sources */,
+				A48ABFAE2C6F895400E57A86 /* ViewDefault.swift in Sources */,
 				A4DC9A962C6A460A00E006D7 /* HomeView.swift in Sources */,
 				A432B40C2C51305700E15136 /* SceneDelegate.swift in Sources */,
 				A46B55602C5A7B0500B03D1E /* RegisterCoordinator.swift in Sources */,

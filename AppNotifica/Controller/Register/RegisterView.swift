@@ -18,7 +18,7 @@ class RegisterView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   
+    
     var onLoginTap: (() -> Void)?
     
     var imageLabel: UILabel = {
@@ -26,21 +26,39 @@ class RegisterView: UIView {
         label.textColor = UIColor(named: "imageLabelColor")
         return label
     }()
-
-       
-    var emailTextField = textfieldDefault(text: "Email")
     
-    var senhaTextField = textfieldDefault(text: "Senha")
     
-    var confirmarSenhaTextField = textfieldDefault(text: "Confirmar Senha")
+    var emailTextField = textfieldDefault(placeholder: "Email", keyBoardType: .emailAddress, returnKeyType: .next)
+    
+    //cria a função com as propriedades da text no login
+    var senhaTextField: textfieldDefault = {
+        let text = textfieldDefault(placeholder: "Senha", keyBoardType: .emailAddress, returnKeyType: .done)
+        
+        text.isSecureTextEntry = true
+        
+        return text
+    }()
+    
+    //cria a função com as propriedades da text no login
+    var confirmarSenhaTextField: textfieldDefault = {
+        let text = textfieldDefault(placeholder: "Confirmar Senha", keyBoardType: .emailAddress, returnKeyType: .done)
+        
+        text.isSecureTextEntry = true
+        
+        return text
+    }()
     
     var buttonRegistrar = buttonDefault(text: "Registrar")
     
     var buttonLogar = buttonDefault(text: "Logar")
-
-
+    
+    
     
     private func setupVisualElements() {
+        // super.setupVisualElements()
+        emailTextField.delegate = self
+        senhaTextField.delegate = self
+        confirmarSenhaTextField.delegate = self
         self.addSubview(imageLabel)
         self.addSubview(emailTextField)
         self.addSubview(senhaTextField)
@@ -56,8 +74,8 @@ class RegisterView: UIView {
             imageLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 200),
             imageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             imageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-                
-                
+            
+            
             emailTextField.widthAnchor.constraint(equalToConstant: 374),
             emailTextField.heightAnchor.constraint(equalToConstant: 60),
             emailTextField.topAnchor.constraint(equalTo: imageLabel.bottomAnchor, constant: 70),
@@ -93,5 +111,24 @@ class RegisterView: UIView {
     @objc
     private func loginTap(){
         onLoginTap?()
+    }
+}
+
+extension RegisterView: UITextFieldDelegate {
+    
+    // configura o botão seguinte do teclado
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == emailTextField {
+            self.senhaTextField.becomeFirstResponder()
+            
+        } else if textField == emailTextField {
+            self.confirmarSenhaTextField.resignFirstResponder()
+            
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }
