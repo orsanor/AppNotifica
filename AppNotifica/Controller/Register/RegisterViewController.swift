@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: ViewControllerDefault {
     var onLoginTap: (() -> Void)?
     
     lazy var registerView: RegisterView = {
@@ -25,10 +25,6 @@ class RegisterViewController: UIViewController {
         return registerView
     }()
     
-    deinit {
-        print("Saindo de \(Self.self)")
-    }
-    
     override func loadView() {
         self.view = registerView
     }
@@ -36,7 +32,5 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Registrar"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.setHidesBackButton(true, animated: false)
     }
 }

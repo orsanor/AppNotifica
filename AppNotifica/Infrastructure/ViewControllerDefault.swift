@@ -12,8 +12,8 @@ class ViewControllerDefault: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Home"
         
+//        self.navigationItem.setHidesBackButton(true, animated: false)
         self.navigationController?.navigationBar.prefersLargeTitles=true
     }
     

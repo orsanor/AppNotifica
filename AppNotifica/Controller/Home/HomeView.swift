@@ -22,6 +22,5 @@ class HomeView: UIView {
     }
     
     func setupVisualElements() {
-        setupVisualElements()
     }
 }

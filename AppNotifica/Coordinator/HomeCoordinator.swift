@@ -25,5 +25,5 @@ class HomeCoordinator: Coordinator {
         let viewController = HomeViewController()
         self.navigationController.pushViewController(viewController, animated: true)
     }
-    }
+}
 

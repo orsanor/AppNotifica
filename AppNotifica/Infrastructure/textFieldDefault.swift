@@ -20,9 +20,8 @@ class textfieldDefault: UITextField {
     }
     
     private func initDefault (text: String){
-        self.text = text
         self.backgroundColor = .textFieldBackgroundColor
-        self.placeholder = "E- mail"
+        self.placeholder = text
         self.textColor = .placeHolderBackgroundColor
         self.translatesAutoresizingMaskIntoConstraints = false
     }

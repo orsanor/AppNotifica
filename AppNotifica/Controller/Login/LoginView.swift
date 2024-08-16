@@ -16,6 +16,7 @@ class LoginView: UIView {
     }
     
     var onRegisterTap: (() -> Void)?
+    var onLoginTap: (() -> Void)?
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -44,6 +45,7 @@ class LoginView: UIView {
         self.addSubview(buttonLogar)
         self.addSubview(buttonRegistrar)
         buttonRegistrar.addTarget(self, action: #selector(registerTap), for: .touchUpInside)
+        buttonLogar.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             imageLogin.widthAnchor.constraint(equalToConstant: 276),
@@ -87,5 +89,10 @@ class LoginView: UIView {
     @objc
      private func registerTap(){
          onRegisterTap?()
+    }
+    
+    @objc
+     private func loginTap(){
+         onLoginTap?()
     }
 }
