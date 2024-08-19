@@ -27,5 +27,12 @@ class HomeCoordinator: Coordinator {
     func start() {
         
     }
+    
+//    func presentNovaOcorrencia(){
+//        let viewModel = NovaOcorrenciaView(coordinator: self)
+//        let viewController = NovaOcorrenciaViewController(coder: viewModel)
+//        let navigationNovaOcorrencia = UINavigationController(rootViewController: viewController)
+//        navigationController.present(navigationNovaOcorrencia, animated: true)
+//    }
 }
 

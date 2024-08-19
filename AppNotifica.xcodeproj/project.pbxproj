@@ -24,6 +24,7 @@
 		A48400E52C57D5AB00250DF9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48400E42C57D5AB00250DF9 /* LoginCoordinator.swift */; };
 		A48400E82C57D6F400250DF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48400E72C57D6F400250DF9 /* LoginViewController.swift */; };
 		A48ABFAE2C6F895400E57A86 /* ViewDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48ABFAD2C6F895400E57A86 /* ViewDefault.swift */; };
+		A48E05CB2C738272005E99AB /* ChooseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E05CA2C738272005E99AB /* ChooseImage.swift */; };
 		A4DC9A962C6A460A00E006D7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A952C6A460A00E006D7 /* HomeView.swift */; };
 		A4DC9A982C6A462600E006D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A972C6A462600E006D7 /* HomeViewController.swift */; };
 		A4DC9A9A2C6A464000E006D7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC9A992C6A464000E006D7 /* HomeCoordinator.swift */; };
@@ -82,6 +83,7 @@
 		A48400E42C57D5AB00250DF9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		A48400E72C57D6F400250DF9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A48ABFAD2C6F895400E57A86 /* ViewDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDefault.swift; sourceTree = "<group>"; };
+		A48E05CA2C738272005E99AB /* ChooseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseImage.swift; sourceTree = "<group>"; };
 		A4DC9A952C6A460A00E006D7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A4DC9A972C6A462600E006D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A4DC9A992C6A464000E006D7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			children = (
 				A8F94D7B2C72F27000428FC0 /* NovaOcorrenciaView.swift */,
 				A8F94D7D2C72F27F00428FC0 /* NovaOcorrenciaViewController.swift */,
+				A48E05CA2C738272005E99AB /* ChooseImage.swift */,
 			);
 			path = NovaOcorrencia;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				A4DC9A982C6A462600E006D7 /* HomeViewController.swift in Sources */,
 				A8F94D762C72F23800428FC0 /* TabBarController.swift in Sources */,
 				A82C71FB2C59796D00CB05D6 /* imageDefault.swift in Sources */,
+				A48E05CB2C738272005E99AB /* ChooseImage.swift in Sources */,
 				A8F94D7C2C72F27000428FC0 /* NovaOcorrenciaView.swift in Sources */,
 				A82C72012C597A5600CB05D6 /* textFieldDefault.swift in Sources */,
 				A48400E52C57D5AB00250DF9 /* LoginCoordinator.swift in Sources */,
