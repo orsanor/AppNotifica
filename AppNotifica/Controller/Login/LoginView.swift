@@ -8,19 +8,10 @@
 import Foundation
 import UIKit
 
-class LoginView: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .viewBackgroundColor
-        setupVisualElements()
-    }
+class LoginView: ViewDefault {
     
     var onRegisterTap: (() -> Void)?
     var onLoginTap: (() -> Void)?
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     lazy var imageLogin = ImageDefault(image: "ImageLogin")
     
@@ -45,8 +36,8 @@ class LoginView: UIView {
     
     
     
-    private func setupVisualElements() {
-//      super.setupVisualElements()
+    override func setupVisualElements() {
+        super.setupVisualElements()
         emailTextField.delegate = self
         senhaTextField.delegate = self
         self.addSubview(imageLogin)

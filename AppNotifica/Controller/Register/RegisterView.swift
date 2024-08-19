@@ -8,16 +8,7 @@
 import Foundation
 import UIKit
 
-class RegisterView: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .viewBackgroundColor
-        setupVisualElements()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+class RegisterView: ViewDefault {
     
     var onLoginTap: (() -> Void)?
     
@@ -54,8 +45,8 @@ class RegisterView: UIView {
     
     
     
-    private func setupVisualElements() {
-        // super.setupVisualElements()
+    override func setupVisualElements() {
+        super.setupVisualElements()
         emailTextField.delegate = self
         senhaTextField.delegate = self
         confirmarSenhaTextField.delegate = self
