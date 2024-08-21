@@ -8,26 +8,30 @@
 import Foundation
 import UIKit
 
-class TabBarCoordinator: Coordinator {
-    
+class TabbarCoordinator : Coordinator {
     let navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController){
         self.navigationController = navigationController
     }
-
     func start() {
-        let tabBarController = TabBarController()
+        //inicializa o TabbarController
+        let tabbarController = TabBarController()
+        tabbarController.modalPresentationStyle = .overFullScreen
+        //inicializar as views da tabbar homeViewCoordinator
+        let homeNavigation = UINavigationController()
+        let homeViewCoordinator = HomeCoordinator(navigationController: homeNavigation)
+        homeViewCoordinator.start()
         
+    
+        let sobreNavigation = UINavigationController()
+        let sobreViewCoordinator = SobreCoordinator(navigationController: sobreNavigation)
+        sobreViewCoordinator.start()
         
-        let homeViewCoordinator = HomeCoordinator(navigationController: self.navigationController)
+        let navigationControllers = [homeNavigation, sobreNavigation]
+        //passa uma lista de view que serão mostradas na tabbar
+        tabbarController.setViewControllers(navigationControllers, animated: true)
         
-        let novaOcorrenciaViewCoordinator = NovaOcorrenciaCoordinator(navigationController: self.navigationController)
-
-        let sobreCoordinator = SobreCoordinator(navigationController: self.navigationController)
-
-        tabBarController.setViewControllers([homeViewCoordinator.homeViewController, novaOcorrenciaViewCoordinator.novaOcorrenciaViewController, sobreCoordinator.sobreViewController], animated: true)
-        self.navigationController.pushViewController(tabBarController, animated: true)
+        self.navigationController.present(tabbarController, animated: true)
     }
 }
-

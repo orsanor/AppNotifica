@@ -34,6 +34,8 @@
 		A82C71FD2C597A2300CB05D6 /* buttonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C71FC2C597A2300CB05D6 /* buttonDefault.swift */; };
 		A82C71FF2C597A3200CB05D6 /* labelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C71FE2C597A3200CB05D6 /* labelDefault.swift */; };
 		A82C72012C597A5600CB05D6 /* textFieldDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C72002C597A5600CB05D6 /* textFieldDefault.swift */; };
+		A89080562C756CB4008C4F0A /* NovaOcorrenciaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89080552C756CB4008C4F0A /* NovaOcorrenciaViewModel.swift */; };
+		A89080582C756D64008C4F0A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89080572C756D64008C4F0A /* HomeViewModel.swift */; };
 		A8F94D762C72F23800428FC0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F94D752C72F23800428FC0 /* TabBarController.swift */; };
 		A8F94D782C72F25600428FC0 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F94D772C72F25600428FC0 /* SobreViewController.swift */; };
 		A8F94D7A2C72F26200428FC0 /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F94D792C72F26200428FC0 /* SobreView.swift */; };
@@ -93,6 +95,8 @@
 		A82C71FC2C597A2300CB05D6 /* buttonDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonDefault.swift; sourceTree = "<group>"; };
 		A82C71FE2C597A3200CB05D6 /* labelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = labelDefault.swift; sourceTree = "<group>"; };
 		A82C72002C597A5600CB05D6 /* textFieldDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldDefault.swift; sourceTree = "<group>"; };
+		A89080552C756CB4008C4F0A /* NovaOcorrenciaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaViewModel.swift; sourceTree = "<group>"; };
+		A89080572C756D64008C4F0A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A8F94D752C72F23800428FC0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A8F94D772C72F25600428FC0 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
 		A8F94D792C72F26200428FC0 /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 			children = (
 				A4DC9A952C6A460A00E006D7 /* HomeView.swift */,
 				A4DC9A972C6A462600E006D7 /* HomeViewController.swift */,
+				A89080572C756D64008C4F0A /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				A8F94D7B2C72F27000428FC0 /* NovaOcorrenciaView.swift */,
 				A8F94D7D2C72F27F00428FC0 /* NovaOcorrenciaViewController.swift */,
 				A48E05CA2C738272005E99AB /* ChooseImage.swift */,
+				A89080552C756CB4008C4F0A /* NovaOcorrenciaViewModel.swift */,
 			);
 			path = NovaOcorrencia;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 				A432B40A2C51305700E15136 /* AppDelegate.swift in Sources */,
 				A4DC9A9A2C6A464000E006D7 /* HomeCoordinator.swift in Sources */,
 				A46B555E2C5A7AD300B03D1E /* RegisterViewController.swift in Sources */,
+				A89080562C756CB4008C4F0A /* NovaOcorrenciaViewModel.swift in Sources */,
 				A82C71FD2C597A2300CB05D6 /* buttonDefault.swift in Sources */,
 				A4DC9A9C2C6A4D2100E006D7 /* ViewControllerDefault.swift in Sources */,
 				A48400E02C57CECC00250DF9 /* LoginView.swift in Sources */,
@@ -460,6 +467,7 @@
 				A432B40C2C51305700E15136 /* SceneDelegate.swift in Sources */,
 				A8F94D802C72F29700428FC0 /* SobreCoordinator.swift in Sources */,
 				A46B55602C5A7B0500B03D1E /* RegisterCoordinator.swift in Sources */,
+				A89080582C756D64008C4F0A /* HomeViewModel.swift in Sources */,
 				A8F94D842C72F2B900428FC0 /* NovaOcorrenciaCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

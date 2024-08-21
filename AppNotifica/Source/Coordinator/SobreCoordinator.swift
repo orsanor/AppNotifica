@@ -25,7 +25,7 @@ class SobreCoordinator: Coordinator {
     }
     
     func start() {
-        
+        self.navigationController.setViewControllers([sobreViewController], animated: false)
     }
 }
 
